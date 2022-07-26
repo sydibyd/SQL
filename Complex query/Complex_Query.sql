@@ -2,7 +2,8 @@
 Edited: 2022/07/26
 Saeid SHARIFY
 From:
-Capstone project | Google Data Analytics professionnal certificate
+Capstone project | Google Data Analytics professionnal certificate  
+
 The goal: to identify what percentage of the company's total orders are been fulfilled by each warehouse. 
 Topic: Writing complex Query, using Subqueries, JOIN, and CASE statments.
 Two datasets are manipulated in this example:
