@@ -1,10 +1,10 @@
-## Capstone project | From Google Data Analytics professionnal certificate
+## Writing complex Query, using Subqueries, JOIN, and CASE statments
+### From Google Data Analytics professionnal certificate | Capstone project
 Edited: 2022/07/26  
-Saeid SHARIFY  
+By Saeid SHARIFY  
 
-### The project goal
-To identify what percentage of the company's total orders are been fulfilled by each warehouse.  
-**Writing complex Query, using Subqueries, JOIN, and CASE statments.**
+### The project goal:
+Write a query to identify what percentage of the company's total orders are been fulfilled by each warehouse.  
 
 
 #### Two .csv datasets are used for manipulation in this example:  
