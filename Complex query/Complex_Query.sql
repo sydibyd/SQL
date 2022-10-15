@@ -25,7 +25,7 @@ Two datasets are manipulated in this example:
 
 
 # SELECT
-# Add 3 columns into the output table:
+# Select 3 columns and add them into the output table:
 # 1. warehouse_id 2. warehouse_name 3. num_of_orders (for each warehouse)
 
 SELECT
