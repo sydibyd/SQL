@@ -2,6 +2,9 @@
 File Name: Data Manipulation with SQL in BigQuery
 Editor: Saeid Sharify
 Date: 2022/10/16
+
+*Separate tips
+
 */
 
 
