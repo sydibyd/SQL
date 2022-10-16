@@ -41,3 +41,19 @@ FROM `project_name.dataset_name.table_name`
 
 GROUP BY trip_year,trip_month
 ORDER BY trip_year,trip_month
+
+
+/* 3. This query counts the number of months and days during which we had trips, for each year. */
+
+SELECT
+ EXTRACT(year FROM A_point_moment) AS year,
+ COUNT(DISTINCT EXTRACT(month FROM A_point_moment)) AS month,
+ COUNT(DISTINCT EXTRACT(dayofyear FROM A_point_moment)) AS day
+
+FROM `project_name.dataset_name.table_name`
+
+GROUP BY year
+ORDER BY year
+
+
+
