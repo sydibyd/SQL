@@ -1,4 +1,11 @@
-/* This query counts the total rows of a specific column, grouped by another value like "eyear rom another column.
+/*
+File Name: Data Manipulation with SQL in BigQuery
+Editor: Saeid Sharify
+Date: 2022/10/16
+*/
+
+
+/* 1. This query counts the total rows of a specific column, grouped by another value like "eyear rom another column.
    This could be usful when there is a need to count something. */
 
 SELECT
@@ -17,7 +24,7 @@ GROUP BY year
 ORDER BY year
 
 
-/* This query counts the total number of observations (trips) grouped by months and years */
+/* 2. This query counts the total number of observations (trips) grouped by months and years */
 
 SELECT
 
