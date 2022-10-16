@@ -11,8 +11,6 @@ SELECT
  
 FROM `project_name.dataset_name.table_name`
 
-
-
  # Group the output results by the extracted year:
 
 GROUP BY year
