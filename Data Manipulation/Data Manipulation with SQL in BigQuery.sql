@@ -7,7 +7,7 @@ Date: 2022/10/16
 
 */
 
-
+# ---- ---- ---- ---- ---- ---- ---- ----
 /* 1. This query counts the total rows of a specific column, grouped by another value like "eyear rom another column.
    This could be usful when there is a need to count something. */
 
@@ -26,7 +26,7 @@ FROM `project_name.dataset_name.table_name`
 GROUP BY year
 ORDER BY year
 
-
+# ---- ---- ---- ---- ---- ---- ---- ----
 /* 2. This query counts the total number of observations (trips) grouped by months and years */
 
 SELECT
@@ -45,7 +45,7 @@ FROM `project_name.dataset_name.table_name`
 GROUP BY trip_year,trip_month
 ORDER BY trip_year,trip_month
 
-
+# ---- ---- ---- ---- ---- ---- ---- ----
 /* 3. This query counts the number of months and days during which we had trips, for each year. */
 
 SELECT
