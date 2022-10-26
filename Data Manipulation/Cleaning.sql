@@ -1,8 +1,6 @@
 /* 1. Cleaning - Name Irregularities. */
 # ---- ---- ---- ---- ---- ---- ---- ----
-
 # Separate two columns and cut a time period from a table to count and compare their values
-
 WITH A_points AS 
 
 (
@@ -16,4 +14,17 @@ WITH A_points AS
     started_at
     BETWEEN '2021-01-01T00:00:00'
     AND '2022-12-31T23:59:59'  
+),
+
+# Calculation: the number of start station name repetition, compared and grouped by station ID.
+station_name_repetition AS
+
+(
+  SELECT
+  start_station_id,
+  COUNT(DISTINCT start_station_name) AS name_repetition
+  FROM A_points
+  
+  group by start_station_id
+  having name_repetition >=2
 ),
