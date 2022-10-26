@@ -29,3 +29,18 @@ WITH time_sample AS
   GROUP BY year_date,month_date
 ),
 
+  # Using LAG() function to calculate previous records partitioned by month date 
+  previous_record AS
+
+(
+  SELECT
+  year_date,
+  month_date,
+  numb_trips,
+  
+  LAG(numb_trips)
+  OVER(PARTITION BY year_date ORDER BY year_date, month_date ASC) AS trips_from_previous_month
+  FROM time_sample
+
+),
+
