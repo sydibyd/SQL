@@ -56,7 +56,5 @@ GROUP BY year
 ORDER BY year
 
 
-/* 4. Cleaning - Name Irregularities. */
-# ---- ---- ---- ---- ---- ---- ---- ----
 
 
