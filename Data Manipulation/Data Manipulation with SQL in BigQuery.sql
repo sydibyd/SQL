@@ -42,7 +42,7 @@ FROM `project_name.dataset_name.table_name`
 GROUP BY trip_year,trip_month
 ORDER BY trip_year,trip_month
 
-/* 3. This query counts the number of months and days during which we had trips, for each year. */
+/* 3. This query counts the number of months and days for each year, during which we had trips. */
 # ---- ---- ---- ---- ---- ---- ---- ----
 
 SELECT
