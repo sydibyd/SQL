@@ -44,3 +44,16 @@ WITH time_sample AS
 
 ),
 
+
+  # Calculate the gap
+
+(
+  SELECT *,
+  numb_trips - trips_from_previous_month as gap
+  FROM previous_record
+  
+),
+
+
+
+
