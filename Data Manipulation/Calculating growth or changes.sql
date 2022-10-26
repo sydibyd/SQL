@@ -68,15 +68,15 @@ WITH time_sample AS
   ROUND((gap / numb_trips) * 100) AS pcent_gap,
 
   # Naming the months with CASE Statement
-  CASE  WHEN month_date = 1 THEN 'January'
-        WHEN month_date = 2 THEN 'February'
-        WHEN month_date = 3 THEN 'March'
-        WHEN month_date = 4 THEN 'April'
-        WHEN month_date = 5 THEN 'May'
-        WHEN month_date = 6 THEN 'June'
-        WHEN month_date = 7 THEN 'July'
-        WHEN month_date = 8 THEN 'August'
-        WHEN month_date = 9 THEN 'September'
+  CASE  WHEN month_date = 1  THEN 'January'
+        WHEN month_date = 2  THEN 'February'
+        WHEN month_date = 3  THEN 'March'
+        WHEN month_date = 4  THEN 'April'
+        WHEN month_date = 5  THEN 'May'
+        WHEN month_date = 6  THEN 'June'
+        WHEN month_date = 7  THEN 'July'
+        WHEN month_date = 8  THEN 'August'
+        WHEN month_date = 9  THEN 'September'
         WHEN month_date = 10 THEN 'October'
         WHEN month_date = 11 THEN 'November'
         WHEN month_date = 12 THEN 'December'
@@ -87,4 +87,10 @@ WITH time_sample AS
   
 )
 
+  # Filter and display the results
+
+  SELECT *
+  FROM pcent_gap
+  WHERE year_date > 2010
+  ORDER BY year_date, month_date
 
