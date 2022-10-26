@@ -4,6 +4,7 @@ Editor: Saeid Sharify
 Date: 2022/08/16
 */
 
+# Count and remove name repetition
 # ---- ---- ---- ---- ---- ---- ---- ----
 # Separate two columns and cut a time period from a table to count and compare their values
 WITH A_points AS 
@@ -33,3 +34,18 @@ station_name_repetition AS
   group by start_station_id
   having name_repetition >=2
 ),
+
+# Joining records based on station IDs
+combined_records AS
+
+(
+  SELECT
+  A_point_names.start_station_name,
+  A_point_IDs.start_station_id,
+  A_point_IDs.name_repetition
+
+  FROM A_points AS A_point_names
+
+  RIGHT JOIN station_name_repetition AS A_point_IDs
+  ON A_point_names.start_station_id = A_point_IDs.start_station_id
+)
