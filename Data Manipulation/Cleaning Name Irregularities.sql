@@ -1,4 +1,4 @@
-/* 1. Cleaning - Name Irregularities. */
+/* Cleaning Name Irregularities. */
 # ---- ---- ---- ---- ---- ---- ---- ----
 # Separate two columns and cut a time period from a table to count and compare their values
 WITH A_points AS 
