@@ -1,4 +1,9 @@
-/* Cleaning Name Irregularities. */
+/*
+File Name: Cleaning name irregularitie
+Editor: Saeid Sharify
+Date: 2022/08/16
+*/
+
 # ---- ---- ---- ---- ---- ---- ---- ----
 # Separate two columns and cut a time period from a table to count and compare their values
 WITH A_points AS 
