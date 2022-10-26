@@ -36,6 +36,7 @@ station_name_repetition AS
 ),
 
 # Joining records based on station IDs
+# I used the RIGHT JOIN keyword, so the result is 0 records from the left side, if there is no match.
 combined_records AS
 
 (
