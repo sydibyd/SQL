@@ -14,7 +14,7 @@ WITH A_points AS
   start_station_name,
   start_station_id
   
-  FROM `capstone-project-356415.00.202201`
+  FROM `project_name.dataset_name.table_name`
 
   WHERE
     started_at
