@@ -49,3 +49,12 @@ combined_records AS
   RIGHT JOIN station_name_repetition AS A_point_IDs
   ON A_point_names.start_station_id = A_point_IDs.start_station_id
 )
+
+# Create a new table to present the results. It will show three columns, including valus for start_station_name, start_station_id and name_repetition.
+  SELECT
+  DISTINCT start_station_name,
+  start_station_id,
+  name_repetition
+
+  FROM combined_records
+  ORDER BY start_station_id,name_repetition
