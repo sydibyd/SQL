@@ -4,7 +4,6 @@ Editor: Saeid Sharify
 Date: 2022/10/16
 */
 
-/* 1. txt */
 # ---- ---- ---- ---- ---- ---- ---- ----
 # Extract month and year to cut and frame a time sample from data
 WITH time_sample AS
