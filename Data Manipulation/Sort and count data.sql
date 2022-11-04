@@ -23,3 +23,19 @@ WITH station_table AS
   AND '2015-12-31T23:59:59'
  
 ),
+
+# Calculate the number of trips launched from each station as A points of trips 
+A_point_counts AS 
+ 
+(
+
+  SELECT
+  start_station_id AS station_id,
+  MAX(start_station_name) AS station_name,
+  COUNT(*) AS A_point_countr
+  
+  FROM station_table
+  
+  GROUP BY station_id
+
+),
