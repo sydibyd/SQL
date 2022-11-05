@@ -24,7 +24,7 @@ WITH station_table AS
  
 ),
 
-# Calculate the number of trips launched from each station as A points of trips 
+# Calculate the number of trips started from each station as A points
 A_point_counts AS 
  
 (
@@ -38,4 +38,18 @@ A_point_counts AS
   
   GROUP BY station_id
 
+),
+
+# Calculate the number of trips terminated to each station as B points
+B_point_counts AS
+
+(
+  SELECT
+  end_station_id AS station_id, 
+  MAX(end_station_name) AS station_name,
+  COUNT(*) AS total_ends
+  
+  FROM station_table
+  GROUP BY station_id
+  
 ),
