@@ -77,3 +77,23 @@ WITH time_intrval AS
   
 ),
 
+# Set a register to calculate the percentage of change
+  percentage_changes AS
+  
+(
+
+  SELECT *,
+  ROUND((y2y_change / trips_per_day) *100) AS percentage_change
+
+  FROM y2y_changes
+  
+)
+
+  # Filter and display the results
+  SELECT *
+  
+  FROM percentage_changes
+  WHERE year = 2014
+  ORDER BY day
+
+
