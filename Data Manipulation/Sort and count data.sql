@@ -75,7 +75,7 @@ ID_based_join AS
 )
 
 
-  # Filter and display the results
+  # Filter and display the results (stations with highest number of trips)
   SELECT
   station_name,
   station_id,
