@@ -57,7 +57,7 @@ B_point_counts AS
 ),
 
 # Joining A and B point counter outputs based on the station_id:
-joined_ids AS
+ID_based_join AS
 
 ( 
 
