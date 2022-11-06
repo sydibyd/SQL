@@ -13,8 +13,7 @@ WITH time_intrval AS
   EXTRACT(year FROM starttime) AS year,
   EXTRACT(dayofweek FROM starttime) AS day
   
-  FROM`bigquery-public-data.new_york_citibike.citibike_trips`
-  #FROM `project_name.dataset_name.table_name`
+  FROM `project_name.dataset_name.table_name`
   
   WHERE
   starttime
