@@ -49,7 +49,7 @@ WITH time_intrval AS
 ),
 
 
-# Set a shift register to calculate year-to-year daily trips
+# Set a shift register to calculate daily trips from last year
   shift_rgistr AS
 (
 
@@ -64,4 +64,16 @@ WITH time_intrval AS
 
 ),
 
+
+# Set a register to calculate year-to-year daily trips (changes over a year)
+  y2y_changes AS
+
+(
+
+  SELECT *,
+  trips_per_day - daily_trips_last_year AS y2y_change
+  
+  FROM shift_rgistr
+  
+),
 
