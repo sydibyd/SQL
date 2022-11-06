@@ -119,5 +119,7 @@ shift_rgistr  AS
   
   FROM percentage_changes 
   
+  
   where year = 2020
   order by day
+
