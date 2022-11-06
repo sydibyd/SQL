@@ -43,4 +43,31 @@ WITH all_trips AS
   
 ),
 
+# Set a weekly table and calculates miles traveled per day of week
+  daily_meters AS
+  
+(
+
+  SELECT
+  year,
+  day,
+
+  CASE WHEN day=1 THEN 'Sunday' 
+       WHEN day=2 THEN 'Monday'
+       WHEN day=3 THEN 'Tuesday'
+       WHEN day=4 THEN 'Wednesday'
+       WHEN day=5 THEN 'Thursday'
+       WHEN day=6 THEN 'Friday'
+       WHEN day=7 THEN 'Saturday'
+       
+       ELSE NULL END AS day_name,
+
+  SUM(cycled_miles) AS daily_miles
+
+  FROM cycled_distance
+ 
+  group by year,day
+ 
+),
+
 
