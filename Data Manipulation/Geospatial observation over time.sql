@@ -99,3 +99,17 @@ shift_rgistr  AS
   FROM shift_rgistr
   
 ),
+
+# Set a register to calculate the percentage of changes
+  percentage_changes  AS
+  
+(
+
+  SELECT *,
+  
+  ROUND((y2y_change / daily_miles) *100) AS percentage_change
+  
+  FROM y2y_changes
+  
+)
+
