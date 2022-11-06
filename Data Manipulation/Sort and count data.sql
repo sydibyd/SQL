@@ -16,8 +16,8 @@ WITH station_table AS
   start_station_id,
   end_station_id
    
-  FROM`bigquery-public-data.new_york_citibike.citibike_trips`
-
+  FROM `project_name.dataset_name.table_name`
+  
   WHERE
   starttime BETWEEN '2014-01-01T00:00:00'
   AND '2015-12-31T23:59:59'
