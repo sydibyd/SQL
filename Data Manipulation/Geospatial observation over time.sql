@@ -28,7 +28,7 @@ WITH all_trips AS
 
 
 # Set a register to calculate cycled miles over time (daily for each year)
-  distance_cycled AS
+  cycled_distance AS
 
 (
 
@@ -37,7 +37,7 @@ WITH all_trips AS
   day,
 
   # Converting meters to miles:
-  ST_DISTANCE(geo_A_point, geo_B_point) * .000621 AS miles_cycled 
+  ST_DISTANCE(geo_A_point, geo_B_point) * .000621 AS cycled_miles 
   
   FROM all_trips
   
