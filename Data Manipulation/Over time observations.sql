@@ -22,3 +22,30 @@ WITH time_intrval AS
   AND '2020-12-31T23:59:59'
   
 ),
+
+
+# Set a weekly table and count daily trips
+  daily_trips AS
+  
+(
+  
+  SELECT
+  year,
+  day,
+  CASE WHEN day=1 THEN 'Sunday' 
+       WHEN day=2 THEN 'Monday'
+       WHEN day=3 THEN 'Tuesday'
+       WHEN day=4 THEN 'Wednesday'
+       WHEN day=5 THEN 'Thursday'
+       WHEN day=6 THEN 'Friday'
+       WHEN day=7 THEN 'Saturday'
+       
+       ELSE NULL END AS day_name,
+
+  COUNT(*) AS trips_per_day
+  
+  FROM time_intrval
+  group by year,day
+
+),
+
