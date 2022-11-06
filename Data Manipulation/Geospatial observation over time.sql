@@ -88,3 +88,14 @@ shift_rgistr  AS
 ),
 
 
+# Set a register to calculate year-to-year daily miles (changes over a year)
+  y2y_changes AS
+
+(
+
+  SELECT *,
+  daily_miles - daily_miles_last_year AS y2y_change
+  
+  FROM shift_rgistr
+  
+),
