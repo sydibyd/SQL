@@ -43,13 +43,18 @@ A_point_counts AS
 # Calculate the number of trips terminated to each station as B points
 B_point_counts AS
 
+B_point_counts AS
+
 (
   SELECT
   end_station_id AS station_id, 
   MAX(end_station_name) AS station_name,
-  COUNT(*) AS total_ends
+  COUNT(*) AS B_point_countr
   
   FROM station_table
   GROUP BY station_id
   
 ),
+
+
+
