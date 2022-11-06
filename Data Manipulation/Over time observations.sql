@@ -4,6 +4,7 @@ Editor: Saeid Sharify
 Date: 2022/10/16
 */
 
+# ---- ---- ---- ---- ---- ---- ---- ----
 # Select a time interval in data and extract years and days
 WITH time_intrval AS
 
