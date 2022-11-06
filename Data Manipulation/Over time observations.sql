@@ -48,3 +48,20 @@ WITH time_intrval AS
 
 ),
 
+
+# Set a shift register to calculate year-to-year daily trips
+  shift_rgistr AS
+(
+
+  SELECT
+  year,
+  day,
+  day_name,
+  trips_per_day,
+  LAG(trips_per_day) OVER(PARTITION BY day ORDER BY day, year ASC) AS daily_trips_last_year
+  
+  FROM daily_trips
+
+),
+
+
