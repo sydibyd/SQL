@@ -113,3 +113,11 @@ shift_rgistr  AS
   
 )
 
+
+  # Filter and display the results
+  SELECT *
+  
+  FROM percentage_changes 
+  
+  where year = 2020
+  order by day
