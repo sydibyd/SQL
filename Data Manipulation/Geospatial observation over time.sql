@@ -43,7 +43,7 @@ WITH all_trips AS
   
 ),
 
-# Set a weekly table and calculates miles traveled per day of week
+# Set a weekly table and calculates miles traveled per days of week
   daily_meters AS
   
 (
@@ -68,6 +68,23 @@ WITH all_trips AS
  
   group by year,day
  
+),
+
+# Set a shift register to calculate daily miles from last year (for days of week)
+shift_rgistr  AS
+
+(
+
+  SELECT
+  year,
+  day,
+  day_name,
+  daily_miles,
+  
+  LAG(daily_miles) OVER(PARTITION BY day ORDER BY day, year ASC) AS daily_miles_last_year
+ 
+  FROM daily_meters
+  
 ),
 
 
