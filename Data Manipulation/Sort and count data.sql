@@ -56,5 +56,21 @@ B_point_counts AS
   
 ),
 
+# Joining A and B point counter outputs based on the station_id:
+joined_ids AS
 
+( 
+
+  SELECT
+  COALESCE(A_point.station_name, B_point.station_name) AS station_name,
+  COALESCE(A_point.station_id,B_point.station_id) AS station_id,  
+  COALESCE(A_point.A_point_countr, 0) AS A_point_countr,
+  COALESCE(B_point.B_point_countr, 0) AS B_point_countr
+  
+  FROM A_point_counts AS A_point
+  
+  FULL OUTER JOIN B_point_counts AS B_point 
+  USING(station_id)
+   
+)
 
