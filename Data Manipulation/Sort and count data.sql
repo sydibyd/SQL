@@ -74,3 +74,15 @@ ID_based_join AS
    
 )
 
+
+  # Filter and display the results
+  SELECT
+  station_name,
+  station_id,
+  A_point_countr,
+  B_point_countr,
+  A_point_countr + B_point_countr AS total_trip_count
+  
+  FROM ID_based_join
+  
+  ORDER BY total_trip_count DESC
