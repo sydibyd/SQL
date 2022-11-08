@@ -26,3 +26,21 @@ WITH all_trips AS
   AND '2020-12-31T23:59:59'
     
 ),
+
+  -- Set a register to calculate and save daily trips for all bikes
+  counter AS
+
+(
+  
+  SELECT
+  year,
+  day_of_month,
+
+  COUNT(bikeid) AS numbr_of_trips
+  
+  FROM all_trips
+  
+  GROUP BY year,day_of_month
+  
+),
+
