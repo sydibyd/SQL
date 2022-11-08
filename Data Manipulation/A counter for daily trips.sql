@@ -44,3 +44,22 @@ WITH all_trips AS
   
 ),
 
+
+  -- Set a register to count and save the weekly average trips
+  avg_registr AS
+  
+(
+
+  SELECT *,
+  AVG(numbr_of_trips) OVER(ORDER BY year, day_of_month ROWS BETWEEN 6  PRECEDING AND CURRENT ROW) AS weekly_avg
+  
+  FROM counter
+  
+)
+
+
+ SELECT * FROM avg_registr
+ ORDER BY year, day_of_month
+
+
+
