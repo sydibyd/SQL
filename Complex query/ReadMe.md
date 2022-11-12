@@ -1,2 +1,0 @@
-## Simple and complex Queries
-
