@@ -1,1 +1,1 @@
-This is a readme file.
+It's useless to read me now :)
