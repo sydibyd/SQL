@@ -27,6 +27,8 @@ Two datasets are manipulated in this example:
 # SELECT
 # Select 3 columns and add them into the output table:
 # 1. warehouse_id 2. warehouse_name 3. num_of_orders (for each warehouse)
+# Add state and warehouse_alias strings together create warehouse_name
+# Count number of orders
 
 SELECT
   Warehouse.warehouse_id,
