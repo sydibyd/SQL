@@ -4,7 +4,7 @@ Editor: Saeid Sharify
 Date: 2022/08/16
 */
 
-# 1. Count and remove name repetition
+# Count and remove name repetition
 # ---- ---- ---- ---- ---- ---- ---- ----
 # Separate two columns and cut a time period from a table to count and compare their values
 WITH A_points AS 
