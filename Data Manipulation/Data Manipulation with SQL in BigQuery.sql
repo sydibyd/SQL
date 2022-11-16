@@ -4,7 +4,7 @@ Editor: Saeid Sharify
 Date: 2022/10/16
 */
 
-/* 1. This query counts the total rows of a specific column, grouped by another value like "eyear rom another column.
+/* This query counts the total rows of a specific column, grouped by another value like "eyear rom another column.
    This could be usful when there is a need to count something. */
 # ---- ---- ---- ---- ---- ---- ---- ----
 
