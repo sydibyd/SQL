@@ -7,3 +7,4 @@
  - [Geospatial observation over time](https://github.com/sydibyd/SQL/blob/main/Data%20Manipulation/Geospatial%20observation%20over%20time.sql)
  - [Observations over time](https://github.com/sydibyd/SQL/blob/main/Data%20Manipulation/Observations%20over%20time.sql)
  - [Sort and count data](https://github.com/sydibyd/SQL/blob/main/Data%20Manipulation/Sort%20and%20count%20data.sql)
+ - [Clean dirty data](https://github.com/sydibyd/SQL/blob/main/Data%20Manipulation/Clean%20dirty%20data.sql)
